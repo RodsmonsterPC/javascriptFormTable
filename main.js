@@ -12,28 +12,30 @@ inputsFields.forEach((fieldsData) => {
 });
 bottomSave.addEventListener("click", () => {
   arrayPeople.push(data);
-  console.log(arrayPeople);
-});
+  let table = document.getElementById("people-wrapper");
+  table.innerHTML = "";
+  arrayPeople.forEach((person) => {
+    let { nombre, Apellido, correo } = person;
 
-arrayPeople.forEach((person) => {
-  let { nombre, Apellido, correo } = person;
+    let peopleRow = document.createElement("tr");
 
-  let peopleRow = document.createElement("tr");
+    let tdName = document.createElement("td");
+    let tdLastName = document.createElement("td");
+    let tdEmail = document.createElement("td");
+    let eraseBottom = document.createElement(`button`);
 
-  let tdName = document.createElement("td");
-  let tdLastName = document.createElement("td");
-  let tdEmail = document.createElement("td");
-  let eraseBottom = document.createElement("buttom");
+    let nameInfo = document.createTextNode(nombre);
+    let lastNameInfo = document.createTextNode(Apellido);
+    let emailInfo = document.createTextNode(correo);
 
-  let nameInfo = document.createTextNode(nombre);
-  let lastNameInfo = document.createTextNode(Apellido);
-  let emailInfo = document.createTextNode(correo);
+    tdName.appendChild(nameInfo);
+    tdLastName.appendChild(lastNameInfo);
+    tdEmail.appendChild(emailInfo);
 
-  tdName.appendChild(nameInfo);
-  tdLastName.appendChild(lastNameInfo);
-  tdEmail.appendChild(emailInfo);
+    peopleRow.append(tdName, tdLastName, tdEmail, eraseBottom);
 
-  peopleRow.append(tdName, tdLastName, tdEmail, eraseBottom);
+    document.getElementById("people-wrapper").appendChild(peopleRow);
+  });
 
-  document.getElementById("people-wrapper").appendChild(peopleRow);
+  data = {};
 });
