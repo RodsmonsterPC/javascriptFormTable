@@ -16,7 +16,7 @@ bottomSave.addEventListener("click", () => {
   arrayPeople.push(data);
   let table = document.getElementById("people-wrapper");
   table.innerHTML = "";
-  arrayPeople.forEach((person) => {
+  arrayPeople.forEach((person, index) => {
     let { nombre, Apellido, correo } = person;
     let idLoc = counter;
     let peopleRow = document.createElement("tr");
@@ -31,7 +31,8 @@ bottomSave.addEventListener("click", () => {
     eraseButton.innerText = "Eliminar";
     eraseButton.onclick = () => {
       document.getElementById("row-" + idLoc).remove();
-    }
+      arrayPeople.splice(index, 1);
+    };
 
     let nameInfo = document.createTextNode(nombre);
     let lastNameInfo = document.createTextNode(Apellido);
@@ -49,4 +50,3 @@ bottomSave.addEventListener("click", () => {
 
   data = {};
 });
-
