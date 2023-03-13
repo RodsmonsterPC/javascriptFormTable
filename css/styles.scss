@@ -1,0 +1,52 @@
+body {
+  background-image: url("./isra.jpg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.erase-button {
+  width: 9rem;
+  height: 3rem;
+  border-radius: 10px;
+  color: white;
+  border: none;
+}
+
+.form-button {
+  margin-top: 10px;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 40%,
+    rgba(255, 248, 0, 1) 67%
+  );
+}
+
+.form-data {
+  height: 20rem;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(1, 113, 153, 1) 40%,
+    rgba(96, 14, 219, 1) 67%,
+    rgba(196, 0, 255, 1) 100%
+  );
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5em;
+}
+
+.table-data {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(30, 31, 32, 1) 40%,
+    rgba(108, 107, 108, 1) 67%,
+    rgba(208, 208, 208, 1) 100%
+  );
+  color: white;
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+}

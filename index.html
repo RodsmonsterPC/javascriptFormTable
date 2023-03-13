@@ -10,15 +10,24 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-6 offset-md-3">
+        <div class="col-sm-12 col-md-6 col-lg-6 mt-5">
           <form
             action=""
-            class="bg-dark text-white border rounded p-3"
+            class="bg-dark text-white border rounded p-3 form-data"
             id="person-form"
           >
             <div class="form-group">
@@ -33,18 +42,19 @@
               <label for="">Correo:</label>
               <input type="text" name="correo" class="form-control" />
             </div>
-            <button id="save-button" type="button">Guardar</button>
+            <button id="save-button" class="form-button" type="button">
+              Guardar
+            </button>
           </form>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-6 offset-md-3">
-          <table class="table">
+        <div class="col-sm-12 col-md-6 col-lg-6 mt-5">
+          <table class="table table-bordered border-primary table-data">
             <thead>
               <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Apellido</th>
                 <th scope="col">Correo</th>
+                <th scope="col">Borrar</th>
               </tr>
             </thead>
             <tbody id="people-wrapper"></tbody>

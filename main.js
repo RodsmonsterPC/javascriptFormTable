@@ -29,8 +29,9 @@ bottomSave.addEventListener("click", () => {
     eraseButton.type = "button";
     eraseButton.value = "delete";
     eraseButton.innerText = "Eliminar";
+    eraseButton.className = "erase-button";
     eraseButton.onclick = () => {
-      document.getElementById("row-" + idLoc).remove();
+      document.getElementById(peopleRow.id).remove();
       arrayPeople.splice(index, 1);
     };
 
