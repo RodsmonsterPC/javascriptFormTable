@@ -369,16 +369,12 @@ document
     radio.addEventListener("change", (event) => {
       let checkValue = event.target.value;
       console.log(checkValue);
-      if (checkValue === peopleBase.gender) {
-        let resultCheck = peopleBase.filter(
-          (valueCheck) => valueCheck.gender === checkValue
-        );
-        console.log(resultCheck);
+      if (checkValue === "all") {
         let card = document.querySelector("#card-info");
 
         card.innerHTML = "";
 
-        resultCheck.forEach((person) => {
+        peopleBase.forEach((person) => {
           let { name, dob, picture, nat } = person;
           let { title, first, last } = name;
           let { date, age } = dob;
@@ -405,11 +401,15 @@ document
           document.getElementById("card-info").appendChild(info);
         });
       } else {
+        let resultCheck = peopleBase.filter(
+          (valueCheck) => valueCheck.gender === checkValue
+        );
+        console.log(resultCheck);
         let card = document.querySelector("#card-info");
 
         card.innerHTML = "";
 
-        peopleBase.forEach((person) => {
+        resultCheck.forEach((person) => {
           let { name, dob, picture, nat } = person;
           let { title, first, last } = name;
           let { date, age } = dob;
