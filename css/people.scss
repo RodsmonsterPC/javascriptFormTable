@@ -1,0 +1,28 @@
+.card {
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(159, 159, 159, 1) 0%,
+    rgba(207, 207, 207, 1) 40%
+  );
+  margin: 1rem;
+}
+
+.card-show {
+  padding: 1rem;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 11, 11, 1) 0%,
+    rgba(83, 83, 83, 1) 40%
+  );
+  border-radius: 10px;
+  color: white;
+  margin: 1rem;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.img-person {
+  border-radius: 50%;
+}

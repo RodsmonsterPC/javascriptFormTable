@@ -12,10 +12,23 @@ inputsFields.forEach((fieldsData) => {
   });
 });
 
+const resetForm = () => {
+  document.querySelectorAll(`#person-form input`).forEach((element) => {
+    element.value = "";
+  });
+};
+
 bottomSave.addEventListener("click", () => {
+  document.querySelectorAll("#person-form input").forEach((element) => {
+    if (!element.value) {
+      return;
+    }
+  });
+
   arrayPeople.push(data);
   let table = document.getElementById("people-wrapper");
   table.innerHTML = "";
+  resetForm();
   arrayPeople.forEach((person, index) => {
     let { nombre, Apellido, correo } = person;
     let idLoc = counter;
