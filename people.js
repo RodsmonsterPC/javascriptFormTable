@@ -382,7 +382,8 @@ document
           let info = document.createElement("div");
           info.className = "card-show";
           let smName = document.createElement("div");
-
+          let flagIcon = document.createElement("img");
+          flagIcon.src = `https://www.countryflagicons.com/FLAT/64/${person.nat}.png`;
           let pNat = document.createElement("div");
           let pDate = document.createElement("div");
           let imgPerson = document.createElement("img");
@@ -396,7 +397,7 @@ document
           pNat.appendChild(natInfo);
           pDate.appendChild(dateInfo);
 
-          info.append(imgPerson, smName, pNat, pDate);
+          info.append(imgPerson, smName, pNat, flagIcon, pDate);
 
           document.getElementById("card-info").appendChild(info);
         });
@@ -417,7 +418,8 @@ document
           let info = document.createElement("div");
           info.className = "card-show";
           let smName = document.createElement("div");
-
+          let flagIcon = document.createElement("img");
+          flagIcon.src = `https://www.countryflagicons.com/FLAT/64/${nat}.png`;
           let pNat = document.createElement("div");
           let pDate = document.createElement("div");
           let imgPerson = document.createElement("img");
@@ -431,7 +433,7 @@ document
           pNat.appendChild(natInfo);
           pDate.appendChild(dateInfo);
 
-          info.append(imgPerson, smName, pNat, pDate);
+          info.append(imgPerson, smName, pNat, flagIcon, pDate);
 
           document.getElementById("card-info").appendChild(info);
         });
