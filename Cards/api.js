@@ -6,7 +6,7 @@ https://kodemia-24g-default-rtdb.firebaseio.com/equipo2/amigos/.json*/
 
 const getUser = async () => {
   let response = await fetch(
-    `https://randomuser.me/api/?results=50&inc=gender,name,nat,dob,picture/.json`
+    `https://randomuser.me/api/?results=50&inc=gender,name,nat,dob,picture,phone,id`
   );
 
   let data = await response.json();
