@@ -1,5 +1,5 @@
 export default {
-  myCard: (name, src, link, btntxt, buttonFunction, dod) => {
+  myCard: (name, gender, src, btntxt, buttonFunction, dod, nat) => {
     let card = document.createElement("div");
     card.classList.add(..."card bg-dark text-white".split(" "));
     let image = document.createElement("img");
@@ -10,29 +10,27 @@ export default {
     let title = document.createElement("h5");
     title.classList.add("card-title");
     title.textContent = name;
+    let gender = document.createElement("h5");
+    title.classList.add("card-gender");
+    title.textContent = gender;
     let listGroup = document.createElement("ul");
     listGroup.classList.add(..."list-group list-group-flush".split(" "));
     let liBirth = document.createElement("li");
     liBirth.classList.add(..."list-group-item bg-dark text-white".split(" "));
     let liNat = document.createElement("li");
+    liNat.textContent = nat;
     let dates = moment(dod).format("Do MMM  YY");
     liNat.classList.add(
       ..."list-group-item bg-dark text-white fw-bold d-flex align-items-center".split(
         " "
       )
     );
-    let liPhone = document.createElement("li");
-    liPhone.classList.add(
-      ..."list-group-item bg-dark text-white fw-bold d-flex align-items-center".split(
-        " "
-      )
-    );
-    let button = document.createElement("a");
+    let button = document.createElement("button");
     button.classList.add(..."btn btn-primary".split(" "));
     button.textContent = btntxt;
-    button.setAttribute("href", link);
+
     button.addEventListener("click", () => buttonFunction);
-    listGroup.append(liPhone, liBirth, liNat);
+    listGroup.append(liBirth, liNat, dates);
     cBody.append(listGroup, button);
     card.append(image, cBody);
     return card;
