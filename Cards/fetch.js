@@ -9,6 +9,7 @@ const renderUsers = ( async() => {
     //función para crear tarjetas 
     //ejemplo
     //createCards(gender, name.first, dob.date, picture.large, nat)
+    document.querySelector('#container-users').appendChild(/*Funcion createCard*/);
   }
 });
 renderUsers();
