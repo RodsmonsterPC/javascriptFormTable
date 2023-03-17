@@ -1,4 +1,4 @@
-import { getCharacter, getCharacters } from "./api.js";
+import { getCharacters } from "./api.js";
 import createCard from "./module.js";
 const printCard = async () => {
   const response = await getCharacters();

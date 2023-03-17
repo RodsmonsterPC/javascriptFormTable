@@ -16,7 +16,7 @@ export default {
     originH5.textContent = origin;
 
     let link = document.createElement("a");
-    link.setAttribute("href", `RickMorty/detailCharacter.html?productId=${id}`);
+    link.setAttribute("href", `./detailCharacter.html?productId=${id}`);
     link.textContent = "Detalles";
     cBody.append(title, originH5, link);
     card.append(image, cBody);

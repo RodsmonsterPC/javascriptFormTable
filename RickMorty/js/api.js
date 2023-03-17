@@ -5,8 +5,8 @@ const getCharacters = async () => {
   return data;
 };
 
-const getCharacter = async () => {
-  let response = fetch(`https://rickandmortyapi.com/api/character/${id}`);
+const getCharacter = async (id) => {
+  let response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
 
   let data = await response.json();
   return data;
