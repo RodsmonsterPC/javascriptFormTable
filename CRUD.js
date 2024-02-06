@@ -2,7 +2,7 @@
 let inputsFields = document.querySelectorAll("#person-form input");
 let bottomSave = document.querySelector("#save-button");
 let data = {};
-
+console.log("hola")
 const getKoders = async () => {
   let response = await fetch(
     "https://kodemia-24g-default-rtdb.firebaseio.com/Rodolfo/koders/.json"
